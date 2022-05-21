@@ -12,7 +12,7 @@ dataset  <- fread( "./datasets/paquete_premium_202011.csv")
 
 
 #uso esta semilla para los canaritos
-set.seed(102191)
+set.seed(100049)
 
 #agrego una variable canarito, random distribucion uniforme en el intervalo [0,1]
 dataset[ ,  canarito1 :=  runif( nrow(dataset) ) ]
@@ -26,9 +26,10 @@ modelo  <- rpart(formula= "clase_ternaria ~ . ",
                  data= dataset[,],
                  model= TRUE,
                  xval= 0,
-                 cp= 0, 
-                 minsplit= 10, 
-                 maxdepth= 10)
+                 cp= -0.5, 
+                 minsplit= 600,
+                 minbucket=300,
+                 maxdepth= 6)
 
 #creo la carepta donde guardo el resultado
 dir.create( "./labo/exp/",  showWarnings = FALSE ) 
@@ -36,6 +37,6 @@ dir.create( "./labo/exp/ST5210/", showWarnings = FALSE )
 setwd("C:/Users/ARI/Desktop/ITBA/5.Mineria/labo/exp/ST5210/")   #Establezco el Working Directory DEL EXPERIMENTO
 
 #genero la imagen del arbol
-pdf( file= "arbol_canaritos.pdf", width=20, height=4)
+pdf( file= "arbol_canaritos_2.pdf", width=20, height=4)
 prp(modelo, extra=101, digits=5, branch=1, type=4, varlen=0, faclen=0)
 dev.off()

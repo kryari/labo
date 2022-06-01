@@ -1,0 +1,8 @@
+exp_KA6520_KA_652_10000: 19.39963 Your submission scored 19.39963, which is not an improvement of your previous score. Keep trying!
+exp_KA6520_KA_652_10500: Your submission scored 20.09462, which is not an improvement of your previous score. Keep trying!
+exp_KA6520_KA_652_11000: Your Best Entry! Your most recent submission scored 20.54961, which is an improvement of your previous score of 20.52461. Great job!
+exp_KA6520_KA_652_11500: Your most recent submission scored 21.54459, which is an improvement of your previous score of 20.54961. Great job!
+exp_KA6520_KA_652_12000: Your most recent submission scored 21.65959, which is an improvement of your previous score of 21.54459. Great job!
+exp_KA6520_KA_652_12500: Your most recent submission scored 21.71459, which is an improvement of your previous score of 21.65959. Great job!
+exp_KA6520_KA_652_13000: Your submission scored 21.54959, which is not an improvement of your previous score. Keep trying!
+exp_KA6520_KA_652_13500: Your submission scored 21.63459, which is not an improvement of your previous score. Keep trying!

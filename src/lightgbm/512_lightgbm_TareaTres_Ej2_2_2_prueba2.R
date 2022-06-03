@@ -36,7 +36,6 @@ modelo  <- lgb.train( data= dtrain,
                                    feature_fraction=    1.0,
                                    min_data_in_leaf= 20,
                                    seed= 999983,
-                                   prob_corte =       1/60,
                                    learning_rate =      0.1,
                                    max_depth=  -1,         # -1 significa no limitar,  por ahora lo dejo fijo
                                    min_gain_to_split= 0.0, #por ahora, lo dejo fijo
@@ -65,7 +64,7 @@ entrega  <- as.data.table( list( "numero_de_cliente"= dapply[  , numero_de_clien
 
 dir.create( "./labo/exp/",  showWarnings = FALSE ) 
 dir.create( "./labo/exp/KA2512/", showWarnings = FALSE )
-archivo_salida  <- "./labo/exp/KA2512/KA_512_001_TareaTres_Ej2_2_2.csv"
+archivo_salida  <- "./labo/exp/KA2512/KA_512_001_TareaTres_Ej2_2_2_Prueba2.csv"
 
 #genero el archivo para Kaggle
 fwrite( entrega, 
@@ -75,7 +74,7 @@ fwrite( entrega,
 
 #ahora imprimo la importancia de variables
 tb_importancia  <-  as.data.table( lgb.importance(modelo) ) 
-archivo_importancia  <- "./labo/exp/KA2512/512_importancia_001_TareaTres_Ej2_2_2.txt"
+archivo_importancia  <- "./labo/exp/KA2512/512_importancia_001_TareaTres_Ej2_2_2_Prueba2.txt"
 
 fwrite( tb_importancia, 
         file= archivo_importancia, 

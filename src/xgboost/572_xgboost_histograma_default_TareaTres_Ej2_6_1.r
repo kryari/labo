@@ -132,7 +132,7 @@ setwd("C:/Users/ARI/Desktop/ITBA/5.Mineria/labo/exp/HT5720/")   #Establezco el W
 
 
 #en estos archivos quedan los resultados
-klog        <- "HT572.txt"
+klog        <- "HT572_TareaTres_Ej2_6_1.txt"
 
 
 GLOBAL_iteracion  <- 0   #inicializo la variable global

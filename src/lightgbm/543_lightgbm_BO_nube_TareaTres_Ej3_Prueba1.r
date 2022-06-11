@@ -154,8 +154,8 @@ setwd("./exp/HT5430/")   #Establezco el Working Directory DEL EXPERIMENTO
 
 
 #en estos archivos quedan los resultados
-kbayesiana  <- "HT543.RDATA"
-klog        <- "HT543.txt"
+kbayesiana  <- "HT543_TareaTres_Ej3_Prueba1.RDATA"
+klog        <- "HT543_TareaTres_Ej3_Prueba1.txt"
 
 
 GLOBAL_iteracion  <- 0   #inicializo la variable global

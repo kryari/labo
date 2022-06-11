@@ -28,9 +28,6 @@ hs <- makeParamSet(
          makeIntegerParam("min_data_in_leaf", lower=  0    , upper= 8000),
          makeIntegerParam("num_leaves",       lower= 16L   , upper= 1024L),
          makeNumericParam("prob_corte",       lower= 1/120 , upper=  1/20)  #esto sera visto en clase en gran detalle
-         ,
-         makeNumericParam("lambda_l1",        lower=  0    , upper=   100),
-         makeNumericParam("lambda_l2",        lower=  0    , upper=   100)
         )
 
 ksemilla_azar  <- 100049  #Aqui poner la propia semilla
@@ -97,8 +94,8 @@ EstimarGanancia_lightgbm  <- function( x )
                           seed= 999983,
                           max_depth=  -1,         # -1 significa no limitar,  por ahora lo dejo fijo
                           min_gain_to_split= 0.0, #por ahora, lo dejo fijo
-                          #lambda_l1= 0.0,         #por ahora, lo dejo fijo
-                          #lambda_l2= 0.0,         #por ahora, lo dejo fijo
+                          lambda_l1= 0.0,         #por ahora, lo dejo fijo
+                          lambda_l2= 0.0,         #por ahora, lo dejo fijo
                           max_bin= 31,            #por ahora, lo dejo fijo
                           num_iterations= 9999,    #un numero muy grande, lo limita early_stopping_rounds
                           force_row_wise= TRUE    #para que los alumnos no se atemoricen con tantos warning
@@ -154,8 +151,8 @@ setwd("./exp/HT5430/")   #Establezco el Working Directory DEL EXPERIMENTO
 
 
 #en estos archivos quedan los resultados
-kbayesiana  <- "HT543_TareaTres_Ej3_Prueba1.RDATA"
-klog        <- "HT543_TareaTres_Ej3_Prueba1.txt"
+kbayesiana  <- "HT543_TareaTres_Ej3_Prueba_Base.RDATA"
+klog        <- "HT543_TareaTres_Ej3_Prueba_Base.txt"
 
 
 GLOBAL_iteracion  <- 0   #inicializo la variable global

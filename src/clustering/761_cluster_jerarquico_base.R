@@ -64,7 +64,7 @@ setwd( "~/buckets/b1/exp/ST7610" )
 
 
 #imprimo un pdf con la forma del cluster jerarquico
-pdf( "cluster_jerarquico_base.pdf" )
+pdf( "cluster_jerarquico_TareaCuatro_Ej3_base.pdf" )
 plot( hclust.rf )
 dev.off()
 
@@ -92,7 +92,7 @@ dataset[  , .N,  cluster2 ]  #tamaño de los clusters
 
 #grabo el dataset en el bucket, luego debe bajarse a la PC y analizarse
 fwrite( dataset,
-        file= "cluster_de_bajas_base.txt",
+        file= "cluster_de_bajas_TareaCuatro_Ej3_base.txt",
         sep= "\t" )
 
 

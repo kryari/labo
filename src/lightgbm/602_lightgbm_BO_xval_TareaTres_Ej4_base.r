@@ -35,9 +35,9 @@ hs <- makeParamSet(
         )
 
 
-kprefijo       <- "HT601_TareaTres_Ej5_Prueba1"
+kprefijo       <- "HT601_TareaTres_Ej4_Prueba1"
 ksemilla_azar  <- 100049  #Aqui poner la propia semilla
-kdataset       <- "./datasets/paquete_premium_ext_001_TareaTres_Ej5_Prueba1.csv.gz"
+kdataset       <- "./datasets/paquete_premium_ext_001_TareaTres_Ej4_Prueba1.csv.gz"
 
 #donde entrenar
 ktrain_mes_desde    <- 201912        #mes desde donde entreno

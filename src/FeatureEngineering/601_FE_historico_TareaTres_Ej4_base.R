@@ -19,7 +19,7 @@ options(error = function() {
   stop("exiting after script error") 
 })
 
-kdataset_salida  <- "paquete_premium_ext_001_TareaTres_Ej5_Prueba1.csv.gz"
+kdataset_salida  <- "paquete_premium_ext_001_TareaTres_Ej4.csv.gz"
 kcampos_fijos  <- c( "numero_de_cliente", "clase_ternaria", "foto_mes" )
 
 #------------------------------------------------------------------------------

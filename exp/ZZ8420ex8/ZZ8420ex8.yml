@@ -1,4 +1,4 @@
-#Aqui se hace Semillerio
+﻿#Aqui se hace Semillerio
 #Toma como entrada un comun  HT  = Hyperparameter Tuning
 # en la seccion param: ,  semillerio:  indica cuantas semillas se mezclan
 # genera archivo que luego se puede hibridar manualmente
@@ -13,7 +13,7 @@ experiment:
   script: "src/completo/z999_ZZ_lightgbm_semillerio.r"
   restart: TRUE
   name: "exp"
-  requires:   [ "HT8310ex9" ]
+  requires:   [ "HT8310ex8" ]
 
 param:
   semilla_primos:  100049 #poner aqui una semilla propia, sirve para crear los numeros primos que seran semillas

@@ -31,7 +31,6 @@ param:
     ratioavg:  FALSE
     ratiomax:  FALSE
 
-
   #lags y sus deltas , 6 posiciones
   lag:   [ TRUE, TRUE, TRUE, FALSE, FALSE, TRUE ]
   delta: [ TRUE, TRUE, TRUE, FALSE, FALSE, TRUE ]

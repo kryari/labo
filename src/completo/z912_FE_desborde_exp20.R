@@ -282,21 +282,15 @@ AgregarVariables  <- function( dataset )
              mv_mconsumosdolares>0| mv_msaldodolares>0, 
            dolarizado := 1 ]
   
-  #incorporo una serie de variables relevantes en orden de importancia, elevadas al cubo (para alejar más los valores entre sí)
+    #incorporo una serie de variables relevantes en orden de importancia (de acuerdo a impo.txt), 
+    #elevadas al cubo (para alejar más los valores entre sí)
   dataset[ , ctrx_quarter_cubo      := ctrx_quarter^3 ]
   dataset[ , cpayroll_trx_cubo      := cpayroll_trx^3 ] 
   dataset[ , mtarjeta_visa_consumo_cubo      := mtarjeta_visa_consumo^3 ] 
   dataset[ , mcaja_ahorro_cubo      := mcaja_ahorro^3 ] 
   dataset[ , mcuentas_saldo_cubo      := mcuentas_saldo^3 ] 
   dataset[ ,  cproductos_cubo      :=  cproductos^3 ] 
-  
-  
-  
- 
-  
-  
-  
-  
+
   
   #valvula de seguridad para evitar valores infinitos
   #paso los infinitos a NULOS

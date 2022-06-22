@@ -29,7 +29,7 @@ param:
     rango:
       desde:  202001
       hasta:  202009
-    excluir: [ 202006, 202003, 202004 ]
+    excluir: [ 202006, 202004]
     undersampling: [ {clase: "CONTINUA", prob: 0.1 } ]  #ATENCION  sin undersampling
 
   #donde valido

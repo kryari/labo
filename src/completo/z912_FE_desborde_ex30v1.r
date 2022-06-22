@@ -301,7 +301,7 @@ AgregarVariables  <- function( dataset )
   dataset[ ,  ctrx_quarter_mcuentas_saldo      :=  ctrx_quarter*mcuentas_saldo ]
   dataset[ ,  mcuentas_saldo_mpayroll      :=  mcuentas_saldo+mpayroll ]
   dataset[ ,  ctrx_quarter_mcuentas_saldo      :=  ctrx_quarter*mcuentas_saldo ]
-  dataset[ ,  mprest_pers*mdesc_preacord      :=  mprestamos_personales*mdescubierto_preacordado ]
+  dataset[ ,  mprest_pers_mdesc_preacord      :=  mprestamos_personales*mdescubierto_preacordado ]
   
   #altas cargas de intereses (en terminos de saldos, consumos, etc.) pueden significar (o no) que el ciente quiera cambiar de banco, o que esté atado al actual
   dataset[ , mpasivos_margen_saldototal      := mpasivos_margen / mv_msaldototal ] 

@@ -248,7 +248,7 @@ AgregarVariables  <- function( dataset )
   dataset[ , mvr_mpagominimo         := mv_mpagominimo  / mv_mlimitecompra ]
   
   #Aqui debe usted agregar sus propias nuevas variables
-  #dataset[ , mpayroll_total      := mpayroll + mpayroll2 ]
+  dataset[ , mpayroll_total      := mpayroll + mpayroll2 ]
   dataset[ , minversion_total      := minversion1_pesos + minversion1_dolares + minversion2 ]
   
   #mayor proporcion de inversion indica cierto "compromiso" del ciente a quedarse algunos meses mas en el banco, y mejor situacion economica (capacidad de ahorro)
@@ -295,7 +295,9 @@ AgregarVariables  <- function( dataset )
   dataset[ ,  Master_status_normalizada      :=  Master_status*(-1000) ]
   dataset[ ,  Visa_status_normalizada      :=  Visa_status*(-1000) ]  
   dataset[ ,  rentabilidad_mes_anio      :=  mrentabilidad*12/mrentabilidad_annual ]  
-  dataset[ ,  foto_mes_new      :=  (foto_mes-202001)^2 ]
+  dataset[ ,  foto_mes_new      :=  0 ]
+  dataset[ foto_mes<202003,  foto_mes_new      :=  (202004-foto_mes)^2 ]
+  dataset[ foto_mes>202006,  foto_mes_new      :=  (foto_mes-202005)^2 ]
   dataset[ ,  ctrx_quarter_mcuentas_saldo      :=  ctrx_quarter*mcuentas_saldo ]
   dataset[ ,  mcuentas_saldo_mpayroll      :=  mcuentas_saldo+mpayroll ]
   dataset[ ,  ctrx_quarter_mcuentas_saldo      :=  ctrx_quarter*mcuentas_saldo ]

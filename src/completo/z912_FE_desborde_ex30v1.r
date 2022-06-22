@@ -274,7 +274,7 @@ AgregarVariables  <- function( dataset )
   
   #busco normalizar la antiguedad. Personas jovenes con alto cociente antiguedad/edad indican fidelidad al banco
   #le resto 18 porque es el primer año a partir del cual podrian tener cuenta
-  dataset[ , antiguedad_edad      := cliente_antiguedad*12 / (cliente_edad-18) ]
+  #dataset[ , antiguedad_edad      := cliente_antiguedad*12 / (cliente_edad-18) ]
   
   #dummy por tener cierta actividad en dólares (puede entenderse como cliente más firme)
   # dataset[  ,  dolarizado := 0 ]
